@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int inn, rente, aar, i;
+    float rentet, total;
+    
+    printf("Hvor mye har du på konto?\n");
+    scanf("%d", &inn);
+    printf("Hva er renten på kontoren?\n");
+    scanf("%d", &rente);
+    printf("Hvor lenge skal pengen være på konto?\n");
+    scanf("%d", &aar );
+    
+        rentet=(rente*0.01+1);
+        total=inn;
+    
+    for (i=1; i<=aar; i++)
+        total=total*rentet;
+    
+    printf("%.3f\n", rentet);
+    printf("Du har %.3f på konte i %d\n", total, 2016+aar);
+    
+    return 0;
+}
