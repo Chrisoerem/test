@@ -1,0 +1,65 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include "stdio.h"
+#include "stdlib.h"
+
+void SkrivUtHei(void);
+void SkrivUtI(int);
+void SumerIXY(int, int, int);
+int SumAvIXY(int, int, int);
+void ForandreI(int *);
+void flaskereg(int, int[]);
+
+int main() {
+
+	int i = 10, x = 1, y = 2;
+	int flasketype[5] = { 0 };
+	flaskereg(1, &flasketype[0]);
+
+	SkrivUtHei();
+	printf("%x\n", &i);
+	ForandreI(&i);
+	SkrivUtI(i);
+	SumerIXY(i, x, y);
+	printf("%d\n", i);
+	printf("%d:\n", SumAvIXY(i, x, y));
+
+
+
+
+	system("PAUSE");
+	return 0;
+}
+
+void flaskereg(int type, int flasketabell[])
+{
+	flasketabell[type - 1] +=1 ;
+
+}
+
+
+void ForandreI(int *ptrI)
+{
+	*ptrI = 7;
+}
+
+
+void SkrivUtHei(void)
+{
+	printf("Hei\n");
+}
+
+void SkrivUtI(int i)
+{
+	printf("%d\n", i);
+}
+
+void SumerIXY(int a, int b, int c)
+{
+	int i = 100;
+	printf("%d %d\n", a + b + c,i);
+}
+
+int SumAvIXY(int a, int b, int c)
+{
+  return a+b+c;
+}
